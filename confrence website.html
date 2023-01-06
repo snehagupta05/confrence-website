@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<style> 
+       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;600;700&family=Lexend+Peta:wght@100&family=Nunito:wght@200&family=Poppins:ital,wght@0,300;1,100;1,200;1,300&display=swap');
+        :root{
+              --min-color:#3867d6;
+
+        }
+        *{
+        font-family: 'Nunito', sans-serif;
+        margin:0; padding:0;
+        box-sizing: border-box;
+        outline: none; 
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+
+
+       }
+       
+       html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 7rem;
+        scroll-behavior: smooth;
+       }
+        
+        html ::-webkit-scrollbar{
+             width:1rem;
+        }
+        html::-webkit-scrollbar{
+            width:1rem;
+        }
+
+        html::-webkit-scrollbar-track{
+            background: #444;
+        }
+
+        html::-webkit-scrollbar-track{
+            background: #444;
+        }
+        html::-webkit-scrollbar-thumb{
+            background: var(--main-color);
+            border-radius: 5rem;
+        }
+        body{
+            background:#222 ;
+        }
+        section{
+          padding:2rem 9%;
+        }
+
+        .heading{
+          text-align: center;
+          padding-bottom: 2rem;
+           color: #fff;
+           text-transform: uppercase;
+           font-size: 4rem;
+        }
+        .heading span{
+          color:#3867d6;
+          text-transform: uppercase;
+        }
+        .btn{
+          margin-top: 1rem;
+          display: inline-block;
+          color:#fff;
+          background: #666;
+          font-size: 1.7rem;
+          border-radius: 6rem;
+          cursor: pointer;
+          font-weight: 600;
+        }
+          .btn:hover{
+                    background: #3867d6;
+          }
+       
+       
+
+        .header{
+            position: fixed;
+            top:0; left: 0; right: 0;
+            Z-index: 10000;
+            background: #333;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 9%;
+          }
+          .header .logo{
+                 font-weight: bolder ;
+                 color:#fff;
+                 font-size: 2.5rem;
+
+          }
+          .header .logo span{
+                color:#3867d6;
+        
+                
+          }
+          .header .navbar a{
+            font-size: 1.7rem;
+            color:#fff;
+            margin-right: 2rem;
+
+          }
+          .header .navbar a:hover{
+              color:var(--main-color);
+          }
+          #menu-bars{
+            font-size: 3rem;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+
+          }
+           
+          .home .content
+                   {
+                    text-align: center;
+                    padding-top: 6rem;
+                    margin: 2rem auto;
+                    max-width: 70rem;
+              
+          }
+          .home .content h3{
+            color: #fff;
+             font-size: 4.5rem;
+             text-transform: uppercase;
+
+          }
+          .home  .content h3 span{
+            color: #3867d6;
+             
+             text-transform: uppercase;
+
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          @media (max-width:991px){
+            html{
+             font-size: 55%;
+               
+           }
+
+           .header{
+            padding:1.5rem 2rem;
+           }
+        
+          }
+          @media (max-width:768px){
+            
+            #menu-bars{
+            
+            display: initial;
+
+          }
+
+          .header .navbar{
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            border-top: .1rem solid #222;
+            background: #333;
+            clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+
+
+
+          }
+          .header .navbar .active{
+            clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+
+          }
+
+          .fa-times{
+                transform: rotate(180deg);
+          }
+          .header .navbar a{
+            display: flex;
+            background: #222;
+            border-radius: .5rem;
+            padding: 1.3rem;
+            margin: 1.3rem;
+            font-size: 2rem;
+          }
+          }
+          @media (max-width:450px){
+            html{
+             font-size: 55%;
+               
+           }
+
+           
+          }
+          .home .home-slider .swiper-slide{
+                     overflow: hidden;
+                     border-radius: .5rem;
+                     height: 50rem;
+                     width: 35rem;
+          } 
+          .speaker .box-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+                gap:  1.5rem;
+
+          }
+          .speaker .box-container .box{
+            border-radius: .5rem;
+            background: #333;
+            text-align: center;
+            padding: 2.5rem;
+          }
+          .speaker .box-container .box h3{
+                font-size: 2rem;
+                color: #fff;
+                padding: 1rem 0;
+          }
+          .speaker .box-container .box p{
+            font-size: 1.4rem;
+            color: #eee;
+            line-height: 1.8;
+          }
+          .about .row{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+          }
+          .about .row image{
+            flex: 1 1 45rem;
+            padding:1rem;
+
+          }
+           .about .row image img{
+            width: 100%;
+            border-radius: .5rem;
+            border: 1rem  solid #333;
+
+          }
+          .about .row .contect{
+            flex: 1 1 45rem;
+          }
+          .about .row .contect h3 h4{
+            font-size: 1.5rem;
+            color: #eee;
+           
+          }
+          .about .row .contect p{
+            font-size: 1.5rem;
+            color: #eee;
+            padding: 1rem 0;
+            line-height: 2;
+          }
+             .tickets .box-container{
+                   display : grid;
+                   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+                   gap: 1.5rem;
+             }
+
+             .tickets .box-container .box{
+              padding: 2rem 0;
+              background: #333;
+              border-radius: .5rem;
+              text-align: center;
+             }
+             .tickets .box-container .box:hover{
+                transform: scale(1.03);
+
+             }
+             .tickets .box-container .box .title{
+                  background: #3867d6;
+                  color: #fff;
+                  padding: 1.5rem 0;
+                    font-size: 2rem;
+                 }
+
+                 .tickets .box-container .box .price{
+                    color: #fff;
+                    padding-top: 2rem ;
+                    font-size: 4rem;
+                 }
+                 .tickets .box-container .box ul{
+                      list-style-type: none;
+                      padding :1rem 0;
+                 }
+
+                 .tickets .box-container .box ul li{
+                    font-size: 1.5rem;
+                    color: #fff;
+                    padding:1rem 0;
+
+                 }
+                 .tickets .box-container .box ul li i{
+                              color: #3867d6;
+                              padding-right: 5rem;
+                 }
+                 .contact form{
+                  max-width: 70rem;
+                  margin: 1rem auto;
+                  text-align: center;
+                 }
+
+                 .contact form .inputBox{
+                  display:flex;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                 }
+                 .contact form .inputBox input,
+                 .contact form textarea{
+                  width: 100%;
+                  background: #333;
+                  border-radius: .5rem;
+                  padding: 1rem;
+                  margin: .7rem 0;
+                  font-size: 1.5rem;
+                  color: #fff;
+                  text-transform: none;
+                 }
+                 .contact form .inputBox input::placeholder,
+                 .contact form textarea::placeholder{
+                  color:#eee;
+                  text-transform: capitalize;
+                 }
+
+                 .contact form .inputBox input:focus,
+                 .contact form textarea:focus{
+                    background:#222 ;
+                 }
+                 .contact form .inputBox input{
+                        width: 49%;
+                 }
+
+                 .contact form textarea{
+                        resize: none;
+                 }
+                 .social{
+                  
+                  color: #3867d6;
+                  font-size: 30px;
+                  margin: 40px 40px;
+                  padding: 0px 10px;  
+                  
+                 }
+                 h4{
+                  color:#eee;
+                 }
+
+                 h3{
+                  color: #eee;
+                 }
+
+                 
+
+
+
+         
+
+       
+       
+</style>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"><span>event</span> Conference</a>
+
+        <nav class="navbar">
+            <a href="#home"> HOME</a>
+
+            <a href="#speaker"> SPEAKER</a>
+            <a href="#venus"> VENUS</a>
+            <a href="#About"> ABOUT</a>
+            <a href="#tickets"> TICKETS</a>
+            <a href="#contact"> CONTACT</a>
+
+        </nav>
+        <div id="menu-bars"class="fas fa-bars">
+
+        </div>
+
+
+
+    </header>
+
+          <section  class="home" id="home">
+            <div class="content">
+              <h3> Event Conference 2022<br/><span>We are Community</span></h3>
+                 
+            <a href ="#" class="btn">contact us</a></div>
+
+              <div class=" swiper-container home-slider">
+                <div class="swiper-wrapper">
+                  
+                  <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOLlteMk9sdW3WgCJchwFBdw_C09uYnWFIBQ&usqp=CAU"
+                       height=" 250" width="400px"alt=""></div>
+                  <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwHwdSk8bEXUAjwuGSyv7NdWG2cvgzYP3LwQ&usqp=CAU" 
+                     height=" 250px" width="400px"alt=""></div>
+                  <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9TisjGJpFSe43dX4c3Y5m90vTjMN9e89XTw&usqp=CAU" 
+                    height=" 250px" width="400px" alt=""></div>
+                  <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgJbzFBJRuPYcDUFY6FtJwb5mIlpS6ka_QhA&usqp=CAU"
+                    height=" 250px" width="400px" alt=""></div>
+                    <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQreNekzRfCYTlj0NiQEgLWViEbsgjdFQuDoA&usqp=CAU"
+                      height=" 250" width="400px"alt=""></div>
+                  </div>
+              </div>
+            </section>
+            <section class="speaker" id="service">
+              <h1 class="heading" > our<span> speaker</span></h1>
+              <div class="box-container">
+                <div class="box">
+                  <h3> Chetan Bhagat</h3>
+                 
+                  <img src="https://tse4.mm.bing.net/th?id=OIP.4XXL6eoG8guHm2TTZ0D_HgHaEu&pid=Api&P=0" 
+                  height="200px" weidth="100px"alt="">
+                  <p>
+                    Chetan Bhagat is an Indian author, columnist and also a motivational speaker.
+                     He was born on 22nd April 1974 and grew up around the Indian army .
+                  </p>
+                </div>
+                
+                <div class="box">
+                  <h3>Sneh Desai</h3>
+                 
+                   <img src="https://tse1.mm.bing.net/th?id=OIP.tlnenoygcvwtszqYnYktNwHaE8&pid=Api&P=0"
+                   height="200px" width="200px" alt="">
+                    <p>
+                      Sneh Desai is the Director of Sneh World Group of Companies (India’s foremost Training Company).
+                       He conducts his signature event ‘Change Your Life Workshop’  
+                 </p>
+                </div>
+
+                <div class="box">
+                     <h3>TS Madan </h3>
+                      
+                      <img src="https://tse1.mm.bing.net/th?id=OIP.Lza2ebUDLyru6qLI1WcqSQHaFj&pid=Api&P=0"
+                      height="200px" width="200px" alt="">
+                  <p>
+                    TS Madan (Tarvinder Singh Madan) born on 14th November 1958 is a very famous Hindi motivational
+                     speaker and a much loved comedian and an established actor. 
+                 </p>
+                </div>
+
+                <div class="box">
+               
+                <h3>Priya Kumar</h3>
+                  
+                   <img src="https://tse1.mm.bing.net/th?id=OIP.JAoKa66QRNsGVyqhQe0GqwHaHa&pid=Api&P=0" 
+                   height="200px" width="200px" alt="">
+               <p>
+                Priya Kumar makes it to our list of top motivational speakers because of her dynamic style
+                 and entertaining sessions.
+              </p>
+             </div>
+
+             <div class="box">
+              <h3>Yogesh Chabria</h3>
+               
+               <img src="https://tse4.mm.bing.net/th?id=OIP.lKE4RljY8WoL3dT5_jveogHaE8&pid=Api&P=0" 
+               height="200px" width="200px" alt="">
+           <p>
+            Yogesh Chabria is one of India’s best motivational speakers because in addition to
+             being a motivational speaker
+          </p>
+         </div>
+
+         <div class="box">
+          <h3>Sandeep Maheshwari</h3>
+           
+           <img src="https://tse2.mm.bing.net/th?id=OIP.FByrl-7td_ZF29Supxqf5QHaEK&pid=Api&P=0" 
+           height="200px" width="200px" alt="">
+       <p>
+        Sandeep Maheshwari has a very inspiring story. He was a regular boy born in a middle class family 
+        and started working as a model in college
+      </p>
+     </div>
+       </div>
+              </div> 
+              <br/><br/><br/>
+              <br/><br/><br/>
+
+              <section class="about" id="about">
+                <br/><br/><br/>
+                <h1 class="heading"> <span>Venus</span>us</h1>
+                <div class="row">
+                  <div class="image">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.GR9Z3QE9UwZa88UeRWLgYwHaFP&pid=Api&P=0"
+                    height="300px" width="500px" alt="">
+                  </div>
+                  <div class="contect">
+                    <h3>6th Floor, The Fairway business park, Domlur, Bengaluru, Karnataka 560071</h3>
+                    <br/>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quia. 
+                      Iste debitis explicabo possimus odit perspiciatis minus culpa praesentium 
+                      consequatur! Fugit ea temporibus, possimus ad rem officiis vel maxime iusto non 
+                      sit corporis officia velit repudiandae repellendus reiciendis culpa pariatur odit
+                       debitis ratione nobis? Numquam nihil earum aliquam.
+                    </p>
+                      
+                          </div>
+                </div>
+               </section>
+               <br/><br/>
+             </section>
+             <br/><br/><br/><br/>
+             <section class="about" id="about">
+              <br/><br/><br/>
+              <h1 class="heading"> <span>about</span>us</h1>
+              <div class="row">
+                <div class="image">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBJQlmMLLQzaudDRhM9dndsqu4IC8LS9wZ5Q&usqp=CAU"
+                  height="300px" width="500px" alt="">
+                </div>
+                <div class="contect">
+                  <h3>we will give a very special conference for you 2022</h3>
+                  <br/>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quia. 
+                    Iste debitis explicabo possimus odit perspiciatis minus culpa praesentium 
+                    consequatur! Fugit ea temporibus, possimus ad rem officiis vel maxime iusto non 
+                    sit corporis officia velit repudiandae repellendus reiciendis culpa pariatur odit
+                     debitis ratione nobis? Numquam nihil earum aliquam.
+                  </p>
+                  <a href="#" class="btn">contact us</a>        
+                        </div>
+              </div>
+             </section>
+             <br/><br/>
+             <br/><br/><br/>
+
+              <section class="tickets" id="tickets"> 
+                <h1 class ="heading"> Our<span> tickets</span></h1>
+                <div class="box-container">
+
+                  <div class="box">
+                    <h3 class="title"> Silver </h3>
+                    <h3 class="price">$80 </h3>
+                      <ul>
+                          <li> <i class="fas fa-check"></i>Full services</li>
+                          <li> <i class="fas fa-check"></i>speaker</li>
+                      </ul> 
+                      <a href ="#" class="btn">Buy tickets</a>
+                  </div>
+
+                  <div class="box">
+                    <h3 class="title"> Gold </h3>
+                    <h3 class="price">$140 </h3>
+                      <ul>
+                          <li> <i class="fas fa-check"></i>Full services</li>
+                          <li> <i class="fas fa-check"></i>speaker</li>
+                      </ul> 
+                      <a href ="#" class="btn">Buy tickets</a> 
+                  </div>
+
+
+                  <div class="box">
+                    <h3 class="title"> Platinum </h3>
+                    <h3 class="price">$200 </h3>
+                      <ul>
+                          <li> <i class="fas fa-check"></i>Full services</li>
+                          <li> <i class="fas fa-check"></i>speaker</li>
+                      </ul> 
+                      <a href ="#" class="btn">Buy tickets</a>
+                  </div>
+                </div>
+              </section>
+              <br/><br/>
+              <br/><br/><br/>
+
+              <section class="contact" id="contact"> 
+
+                    <h1 class="heading"> <span>Contact</span>us</h1>
+
+                    
+                    <form action="">
+                       <div class="inputBox">
+                           <input type="text" placeholder="name">
+                           <input type="email" placeholder="email">
+                       </div>
+
+                       <div class="inputBox">
+                        <input type="number" placeholder="number">
+                        <input type="text" placeholder="sunject">
+                       </div>
+
+                       
+                       <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+                        <input type ="submit" value="send message" class="btn">
+                        <br/><br/>
+
+                        <div class="social">
+                          <a href=""><i class="fab fa-facebook-f"></i></a>
+                          <a href=""><i class="fab fa-twitter"></i></a>
+                          <a href=""><i class="fab fa-instagram"></i></a>
+      
+                      </div>
+                                   
+                      </form>
+          
+
+
+
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script> 
+       let menu= document.querySelector('#menu-bars');
+       let navbar= document.querySelector('.navbar');
+        
+       menu.onclick =() =>{
+        menu.classList.toggle('fa-times');
+         navbar.classList.toggle('active');
+       }
+       menu.onscroll  =() =>{
+        menu.classList.remove('fa-times');
+         navbar.classList.remove('active');
+       }
+       var swiper = new Swiper(".mySwiper",
+        {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+         loop:true,
+         autoplay:
+         {
+          delay: 3000,
+          disableOnInteraction:false,
+         
+         }
+      }
+      );
+
+
+
+
+       </script>
+         
+         
+
+    
+ </body>
+</html>
